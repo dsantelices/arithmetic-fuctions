@@ -1,5 +1,6 @@
 import sys
 
+
 def zero():
     return 0
 
@@ -88,16 +89,15 @@ def process(expression: str):
     return result
 
 
-def main(argv):
+def main():
     if len(sys.argv) < 2:
         print('Missing input parameter')
         return
 
-    expresion = sys.argv[1]
-    test = 'nine(divided_by(zero()))'
-    result = process(expresion)
+    expression = sys.argv[1]
+    result = process(expression)
     print(result)
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+    main()
