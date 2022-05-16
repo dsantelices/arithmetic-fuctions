@@ -52,7 +52,8 @@ def times(val1: int, val2: int):
 
 
 def divided_by(val1: int, val2: int):
-    # TODO: Check val2 == 0
+    if val2 == 0:
+        raise Exception('Error: divide by zero')
     return val1 // val2
 
 
@@ -87,8 +88,9 @@ def process(expression: str):
 
 
 def main():
-    test = 'four(times(five()))'
-    process(test)
+    test = 'nine(divided_by(zero()))'
+    result = process(test)
+    print(result)
 
 
 if __name__ == '__main__':
